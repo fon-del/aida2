@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Прокрутка окна</title>
+</head>
+<body>
+
+    <button onclick="scrollDown()">Прокрутить на 100px вниз</button>
+
+    <script>
+        function scrollDown() {
+            window.scrollBy(0, 100);  // Прокручиваем на 100px вниз (по вертикали)
+        }
+    </script>
+
+</body>
+</html>
+
+//№2
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Прокрутка окна</title>
+</head>
+<body>
+
+    <button onclick="scrollUp()">Прокрутить на 100px вверх</button>
+
+    <script>
+        function scrollUp() {
+            window.scrollBy(0, -100);  // Прокручиваем на 100px вверх (по вертикали)
+        }
+    </script>
+
+</body>
+</html>
+//3
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Прокрутка окна</title>
+</head>
+<body>
+
+    <button onclick="smoothScrollDown()">Плавно прокрутить на 300px вниз</button>
+
+    <script>
+        function smoothScrollDown() {
+            window.scrollBy({
+                top: 300,   // Прокручиваем на 300px вниз (по вертикали)
+                left: 0,
+                behavior: 'smooth'  // Плавная прокрутка
+            });
+        }
+    </script>
+
+</body>
+</html>
+//4
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Прокрутка окна</title>
+</head>
+<body>
+
+    <button onclick="smoothScrollUp()">Плавно прокрутить на 300px вверх</button>
+
+    <script>
+        function smoothScrollUp() {
+            window.scrollBy({
+                top: -300,  // Прокручиваем на 300px вверх (по вертикали)
+                left: 0,
+                behavior: 'smooth'  // Плавная прокрутка
+            });
+        }
+    </script>
+
+</body>
+</html>

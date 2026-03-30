@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Прокрутка окна</title>
+</head>
+<body>
+
+    <button onclick="scrollToPosition(300)">Прокрутить на 300px сверху</button>
+
+    <script>
+        function scrollToPosition(y) {
+            window.scrollTo({
+                top: y,  // Задаем вертикальную прокрутку
+                behavior: 'smooth'  // Плавная прокрутка
+            });
+        }
+    </script>
+
+</body>
+</html>
+//#2
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Прокрутка окна</title>
+</head>
+<body>
+
+    <button onclick="scrollToPositionFromBottom(100)">Прокрутить на 100px снизу</button>
+
+    <script>
+        function scrollToPositionFromBottom(offset) {
+            let scrollHeight = document.documentElement.scrollHeight; // Полная высота страницы
+            let clientHeight = document.documentElement.clientHeight; // Видимая часть окна
+            let targetPosition = scrollHeight - clientHeight - offset; // Рассчитываем позицию от нижней части страницы
+            window.scrollTo({
+                top: targetPosition,
+                behavior: 'smooth' // Плавная прокрутка
+            });
+        }
+    </script>
+
+</body>
+</html>
+
+//#3
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Прокрутка окна</title>
+</head>
+<body>
+
+    <button onclick="scrollToTop()">Прокрутить на самый верх</button>
+
+    <script>
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,  // Прокручиваем в самое начало
+                behavior: 'smooth'  // Плавная прокрутка
+            });
+        }
+    </script>
+
+</body>
+</html>
+
+//#4
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Прокрутка окна</title>
+</head>
+<body>
+
+    <button onclick="scrollToBottom()">Прокрутить на самый низ</button>
+
+    <script>
+        function scrollToBottom() {
+            window.scrollTo({
+                top: document.documentElement.scrollHeight, // Прокручиваем в самый низ
+                behavior: 'smooth'  // Плавная прокрутка
+            });
+        }
+    </script>
+
+</body>
+</html>

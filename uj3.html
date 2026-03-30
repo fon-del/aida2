@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Прокрутка к элементу</title>
+    <style>
+        .content {
+            height: 1000px;
+        }
+        #target {
+            margin-top: 500px; /* Чтобы элемент был не вверху */
+            padding: 20px;
+            background-color: lightblue;
+            border: 2px solid #333;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="content">
+        <p>Прокрутите страницу вниз, чтобы увидеть кнопку и элемент.</p>
+        <button onclick="scrollToElement()">Прокрутить к элементу</button>
+        <div id="target">
+            <p>Я целевой элемент</p>
+        </div>
+    </div>
+
+    <script>
+        // Функция прокрутки к элементу
+        function scrollToElement() {
+            let elem = document.getElementById('target');
+            
+            // Прокрутка так, чтобы элемент был сверху окна (по умолчанию)
+            elem.scrollIntoView(true);
+
+            // Прокрутка так, чтобы элемент был снизу окна
+            // elem.scrollIntoView(false);
+
+            // Плавная прокрутка, элемент будет сверху
+            // elem.scrollIntoView({
+            //     behavior: 'smooth',
+            //     block: 'start'
+            // });
+
+            // Плавная прокрутка, элемент будет снизу
+            // elem.scrollIntoView({
+            //     behavior: 'smooth',
+            //     block: 'end'
+            // });
+
+            // Плавная прокрутка с настройками выравнивания
+            elem.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start',  // Выравнивание элемента сверху
+                inline: 'end'    // Горизонтальное выравнивание элемента справа
+            });
+        }
+    </script>
+
+</body>
+</html>
